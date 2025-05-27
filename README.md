@@ -34,3 +34,20 @@ git clone https://github.com/YOUR_USERNAME/typing-speed-test.git
 cd typing-speed-test
 ```
 
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Run the app locally
+```bash
+npm start
+```
+### Open http://localhost:3000 in your browser.
+
+### 🌍 Deployment
+```bash
+You can deploy it easily using:
+
+Vercel
+```
