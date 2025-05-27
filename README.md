@@ -22,7 +22,6 @@ Test your typing speed and accuracy in real-time, save your scores with initials
 
 ![App Screenshot](./public/preview.png)
 
-> _Add a screenshot of your app here (optional)._
 
 ---
 
