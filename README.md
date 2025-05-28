@@ -51,3 +51,24 @@ You can deploy it easily using:
 
 Vercel
 ```
+
+### 🛠 Tech Stack
+
+- ⚛️ React
+
+- 🌈 Tailwind CSS
+
+- 📦 localStorage
+
+- 📄 HTML5
+
+- 🎯 JavaScript (ES6+)
+
+### 🙋‍♂️ Author
+- Kinshuk Srivastava
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/kinshuk-srivastava-57932a241/)
+
+- ✉️ kinshuksriv9191@gmail.com
+
+
