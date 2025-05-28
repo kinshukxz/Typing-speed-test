@@ -14,17 +14,18 @@ const App = () => {
 
   const handleInputChange = (value) => {
     if (!startTime) setStartTime(Date.now());
-    if (value === text) {
-      const time = (Date.now() - startTime) / 1000 / 60;
-      const calculatedWpm = Math.round(text.split(" ").length / time);
-      const correct = value.split("").filter((c, i) => c === text[i]).length;
-      const calculatedAccuracy = Math.round((correct / text.length) * 100);
-      setWpm(calculatedWpm);
-      setAccuracy(calculatedAccuracy);
-      setFinished(true);
-      saveScore(calculatedWpm, calculatedAccuracy);
-    }
     setInput(value);
+  };
+
+  const handleSubmit = () => {
+    const time = (Date.now() - startTime) / 1000 / 60;
+    const calculatedWpm = Math.round(text.split(" ").length / time);
+    const correct = input.split("").filter((c, i) => c === text[i]).length;
+    const calculatedAccuracy = Math.round((correct / text.length) * 100);
+    setWpm(calculatedWpm);
+    setAccuracy(calculatedAccuracy);
+    setFinished(true);
+    saveScore(calculatedWpm, calculatedAccuracy);
   };
 
   const saveScore = (wpm, accuracy) => {
@@ -69,6 +70,25 @@ const App = () => {
           onChange={handleInputChange}
           disabled={finished}
         />
+        {!finished && (
+          <button onClick={handleSubmit} className="uiverse mt-6">
+            <div className="wrapper">
+              <span>Submit</span>
+              <div className="circle circle-12"></div>
+              <div className="circle circle-11"></div>
+              <div className="circle circle-10"></div>
+              <div className="circle circle-9"></div>
+              <div className="circle circle-8"></div>
+              <div className="circle circle-7"></div>
+              <div className="circle circle-6"></div>
+              <div className="circle circle-5"></div>
+              <div className="circle circle-4"></div>
+              <div className="circle circle-3"></div>
+              <div className="circle circle-2"></div>
+              <div className="circle circle-1"></div>
+            </div>
+          </button>
+        )}
         {finished && (
           <>
             <Stats wpm={wpm} accuracy={accuracy} />
@@ -85,7 +105,7 @@ const App = () => {
 
       {/* 🦶 Footer */}
       <footer className="w-full text-center py-3 text-sm border-t border-gray-700">
-        Built by <strong>Kinshuk</strong> 💻 
+        Built by <strong>Kinshuk</strong> 💻
       </footer>
     </div>
   );
